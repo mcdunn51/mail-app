@@ -1,5 +1,5 @@
-import React from 'react';  
-import Radium from 'radium';
+import React from 'react';
+import Radium, { Style } from 'radium';
 
 const LogInContainer =  (props) => {
 
@@ -19,6 +19,12 @@ const LogInContainer =  (props) => {
             justifyContent: 'centre',
             flexDirection: 'column',
             borderRadius: '5px',
+            '@media screen and (max-width: 600px)': {
+                width: '85%',
+            },
+            '@media screen and (max-height: 400px) and (max-width: 700px)': {
+                width: '85%',
+            }
         },
         envelopeImg: {
             maxWidth: '100%',
@@ -62,7 +68,7 @@ const LogInContainer =  (props) => {
                     <label style={style.formLabel} for="psw"><b>Password</b></label>
                     <input style={style.input} type="password" placeholder="Enter Password" name="password" required/>
 
-                    <button style={style.loginButton} type="submit">Login</button>
+                    <button onClick={props.click} style={style.loginButton} type="submit">Login</button>
 
                     <div style={style.forgotPwdRememberMeContainer}>
                         <label style={style.rememberMe}>
@@ -71,6 +77,19 @@ const LogInContainer =  (props) => {
                         <span class="psw">Forgot <a href="#">password?</a></span>
                     </div>
             </form>
+            <Style rules={{
+        body: {
+          padding: '0%',
+        },
+        mediaQueries: {
+          '(max-height: 400px) and (max-width: 700px)': {
+            body: {
+              height: '200%',
+            }
+        }
+      }
+}}
+    />
         </div>
     );
 };
