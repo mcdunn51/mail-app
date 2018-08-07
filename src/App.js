@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import LogInContainer from './components/loginContainer';
 import Radium, { StyleRoot } from 'radium';
 import MailTable from './components/table';
-
+import NoMail from './components/noMail';
 
 class App extends Component {
     state = {
       showLogin: true,
-      showMailTable: false
+      showMailTable: false,
+      showNoMail: false
     }
    
     toggleShowLoginHandler = () => {
@@ -15,22 +16,43 @@ class App extends Component {
       this.setState({showLogin: !doesShow});
     }
 
+    toggleShowEitherMailTableOrNoMail = () => {
+      let oneOrZero = Math.round(Math.random());
+      if (oneOrZero == 0) {
+        this.toggleShowNoMail();
+      } else {
+        this.toggleShowMailTableHandler();
+      }
+    }
+    
+
     toggleShowMailTableHandler = () => {
       const doesShow = this.state.showMailTable;
       this.setState({showMailTable: !doesShow});
+    }
+
+    toggleShowNoMail = () => {
+      const doesShow = this.state.showNoMail;
+      this.setState({showNoMail: !doesShow});
     }
 
     render() {
       let login = null;
       if (this.state.showLogin) {
         login = (<LogInContainer
-        click = { () => {this.toggleShowLoginHandler(); this.toggleShowMailTableHandler() }}
+        click = { () => {this.toggleShowLoginHandler(); this.toggleShowEitherMailTableOrNoMail() }}
         />);
       }
 
       let mailTable = null;
       if (this.state.showMailTable) {
         mailTable = (<MailTable
+        />);
+      }
+
+      let noMail = null;
+      if (this.state.showNoMail) {
+        noMail = (<NoMail
         />);
       }
 
@@ -43,6 +65,7 @@ class App extends Component {
       <StyleRoot style={style}>
         {login}
         {mailTable}
+        {noMail}
       </StyleRoot>
     );
   }
