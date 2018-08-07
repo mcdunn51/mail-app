@@ -1,5 +1,6 @@
-import React, { Component} from 'react';
+import React, { Component, Fragment} from 'react';
 import Radium, { Style } from 'radium';
+import ShowMap from './showMap';
 
 class MailTable extends Component {
 
@@ -90,6 +91,7 @@ render () {
     }     
     
     return (
+    <Fragment>
       <div style={style.tableContainer}>
       <table style={style.table}>
         <caption style={style.caption}>Statement Summary</caption>
@@ -142,6 +144,7 @@ render () {
       <Style rules={{
         body: {
           padding: '10%',
+          textAlign: 'center',
         },
         mediaQueries: {
           '(max-width: 600px)': {
@@ -152,6 +155,8 @@ render () {
       }}}
     />
       </div>
+      <ShowMap/>
+    </Fragment>
     )
   }
 }

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Fragment } from 'react';
 import Radium, { Style } from 'radium';
+import ShowMap from './showMap';
 
 const NoMail =  (props) => { 
 
@@ -23,6 +24,7 @@ const NoMail =  (props) => {
         };
     
         return (
+        <Fragment>
             <div style={style.noMailWrapper}>
                 <h1 style={style.h1}>You currently have no mail to collect</h1>
                       
@@ -34,10 +36,13 @@ const NoMail =  (props) => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         flexDirection: 'column',
+                        textAlign: 'center',
                     },
                 }}
                 />
             </div>
+            <ShowMap/>
+        </Fragment>
         );
     };
     

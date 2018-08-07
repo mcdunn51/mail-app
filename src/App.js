@@ -3,6 +3,7 @@ import LogInContainer from './components/loginContainer';
 import Radium, { StyleRoot } from 'radium';
 import MailTable from './components/table';
 import NoMail from './components/noMail';
+// import ShowMap from './components/showMap';
 
 class App extends Component {
     state = {
@@ -25,7 +26,6 @@ class App extends Component {
       }
     }
     
-
     toggleShowMailTableHandler = () => {
       const doesShow = this.state.showMailTable;
       this.setState({showMailTable: !doesShow});
@@ -66,6 +66,7 @@ class App extends Component {
         {login}
         {mailTable}
         {noMail}
+        
       </StyleRoot>
     );
   }
