@@ -2,9 +2,10 @@ import React, {Fragment } from 'react';
 import Radium, { Style } from 'radium';
 import ShowMap from './showMap';
 
-const NoMail =  (props) => { 
+const NoMail =  () => { 
 
         const style = {
+
             noMailWrapper: {
                 width:'100%',
                 height: '100%',
@@ -17,6 +18,7 @@ const NoMail =  (props) => {
                 alignItems: 'center',
                 justifyContent: 'center',
             },
+
             h1: {
                 color: 'white',
                 textAlign: 'centre',
@@ -24,25 +26,25 @@ const NoMail =  (props) => {
         };
     
         return (
-        <Fragment>
-            <div style={style.noMailWrapper}>
-                <h1 style={style.h1}>You currently have no mail to collect</h1>
-                      
-                <Style rules={{
-                    body: {
-                        padding: '10%',
-                        boxSizing: 'border-box',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        textAlign: 'center',
-                    },
-                }}
-                />
-            </div>
-            <ShowMap/>
-        </Fragment>
+            <Fragment>
+                <div style={style.noMailWrapper}>
+                    <h1 style={style.h1}>You currently have no mail to collect</h1>
+
+                    <Style rules={{
+                        body: {
+                            padding: '10%',
+                            boxSizing: 'border-box',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexDirection: 'column',
+                            textAlign: 'center',
+                        },
+                    }}
+                    />
+                </div>
+                <ShowMap />
+            </Fragment>
         );
     };
     

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import LogInContainer from './components/loginContainer';
 import Radium, { StyleRoot } from 'radium';
-import MailTable from './components/table';
+import MailTable from './components/mailTable';
 import NoMail from './components/noMail';
-// import ShowMap from './components/showMap';
+
 
 class App extends Component {
     state = {
@@ -56,20 +56,19 @@ class App extends Component {
         />);
       }
 
-    const style = {
-      width:'100%',
-      height: '100%',
-    }
+      const style = {
+        width:'100%',
+        height: '100%',
+      }
 
-    return (
-      <StyleRoot style={style}>
-        {login}
-        {mailTable}
-        {noMail}
-        
-      </StyleRoot>
-    );
+      return (
+        <StyleRoot style={style}>
+          {login}
+          {mailTable}
+          {noMail}
+        </StyleRoot>
+      );
+    }
   }
-}
 
 export default Radium (App);
