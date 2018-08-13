@@ -32,13 +32,16 @@ const NoMail =  () => {
 
                     <Style rules={{
                         body: {
-                            padding: '10%',
+                            paddingTop: '10%',
+                            paddingLeft: '10%',
+                            paddingRight: '10%',
                             boxSizing: 'border-box',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             flexDirection: 'column',
                             textAlign: 'center',
+                            height:'auto',
                         },
                     }}
                     />

@@ -138,13 +138,16 @@ render () {
           </table>
           <Style rules={{
             body: {
-              padding: '10%',
+              paddingTop: '10%',
+              paddingLeft: '10%',
+              paddingRight: '10%',
               textAlign: 'center',
+              height: 'auto',
             },
             mediaQueries: {
               '(max-width: 600px)': {
                 body: {
-                  padding: '2%'
+                  padding: '2%',
                 }
               }
             }
