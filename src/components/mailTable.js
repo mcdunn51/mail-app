@@ -1,4 +1,4 @@
-import React, { Component, Fragment} from 'react';
+import React, { Component } from 'react';
 import Radium, { Style } from 'radium';
 import ShowMap from './showMap';
 
@@ -86,7 +86,7 @@ render () {
   }     
     
     return (
-      <Fragment>
+      <div>
         <div style={style.tableContainer}>
           <table style={style.table}>
             <caption style={style.caption}>Statement Summary</caption>
@@ -152,7 +152,7 @@ render () {
           />
         </div>
         <ShowMap />
-      </Fragment>
+      </div>
     )
   }
 }
