@@ -15,6 +15,7 @@ const LogInContainer =  (props) => {
             width: '30%',
             border: '10px solid green',
             padding: '10px',
+            backgroundColor: 'white',
             display: 'flex',
             justifyContent: 'centre',
             flexDirection: 'column',

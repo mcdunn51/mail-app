@@ -7,6 +7,10 @@ body {
   padding: 0;
   font-family: sans-serif;
   height: 100%;
+  background-image: url(./images/manchesterImage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #root {
